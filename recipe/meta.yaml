@@ -1,5 +1,5 @@
 {% set name = "pwntools" %}
-{% set version = "4.3.1" %}
+{% set version = "4.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pwntools-{{ version }}.tar.gz
-  sha256: c46188e713c47617b2dbf3e32d1867f948d35d82fddf9a9d2294a33f47484a8a
+  sha256: 2161cca2b480486fe9a3c89bd70852df13eea145250f4b5b6d6237e432364886
 
 build:
   number: 0
@@ -41,7 +41,7 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - ncurses
     - capstone >=3.0.5rc2
@@ -55,13 +55,15 @@ requirements:
     - pygments >=2.0
     - pyserial >=2.7
     - pysocks
-    - python
+    - python >=3.6
     - python-dateutil
     - requests >=2.0
     - ropgadget >=5.3
     - six >=1.12.0
     - sortedcontainers
     - python-unicorn >=1.0.2rc1,<1.0.2rc4
+    - colored-traceback
+    - rpyc
 
 test:
   # Can't use a regular imports test as due to the issue with the TERM variable
