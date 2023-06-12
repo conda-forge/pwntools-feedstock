@@ -11,7 +11,7 @@ source:
   sha256: 588e89ea678527c0b5b6caeeee7e76e31352e78e2f1cf3dda7bc9acf526e446d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pwn=pwnlib.commandline.main:main
@@ -61,7 +61,7 @@ requirements:
     - ropgadget >=5.3
     - six >=1.12.0
     - sortedcontainers
-    - python-unicorn >=1.0.2rc1,<1.0.2rc4
+    - python-unicorn >=1.0.2rc1
     - colored-traceback
     - rpyc
 
