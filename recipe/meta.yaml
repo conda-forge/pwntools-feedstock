@@ -42,6 +42,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools >=44.0
   run:
     - ncurses
     - capstone >=3.0.5rc2
@@ -51,7 +52,7 @@ requirements:
     - paramiko >=1.15.2
     - pip >=6.0.8
     - psutil >=3.3.0
-    - pyelftools >=0.2.4
+    - pyelftools >=0.24
     - pygments >=2.0
     - pyserial >=2.7
     - pysocks
@@ -64,6 +65,8 @@ requirements:
     - python-unicorn >=1.0.2rc1
     - colored-traceback
     - rpyc
+    - unix-ar
+    - zstandard
 
 test:
   # Can't use a regular imports test as due to the issue with the TERM variable
