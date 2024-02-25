@@ -1,5 +1,5 @@
 {% set name = "pwntools" %}
-{% set version = "4.11.1" %}
+{% set version = "4.12.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pwntools-{{ version }}.tar.gz
-  sha256: ee19e35fbdb5b7463329c27be51fad11f508e84f5bc4c617504b48e7a18364fd
+  sha256: 320285bd9266152fdba3b81de3a31e61a25076645507a38d85f34e1b15998eb1
 
 build:
   number: 0
@@ -46,7 +46,7 @@ requirements:
   run:
     - paramiko >=1.15.2
     - mako >=1.0.0
-    - pyelftools >=0.24
+    - pyelftools >=0.29
     - capstone >=3.0.5rc2
     - ropgadget >=5.3
     - pyserial >=2.7
@@ -59,10 +59,12 @@ requirements:
     - psutil >=3.3.0
     - intervaltree >=3.0
     - sortedcontainers
-    - python-unicorn >=1.0.2rc1
+    - python-unicorn >=2.0.1
     - six >=1.12.0
     - rpyc
     - colored-traceback
+    - unix-ar
+    - zstandard
     - python >=3.6
 
 test:
