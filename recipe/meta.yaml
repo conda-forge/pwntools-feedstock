@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pwntools-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pwntools-{{ version }}.tar.gz
   sha256: b3322725fb5031dc30965e3855073608d9abf74d2abf97a72c67d44aadfce37c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pwn=pwnlib.commandline.main:main
@@ -41,7 +41,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools >=44.0
   run:
     - paramiko >=1.15.2
@@ -65,7 +65,7 @@ requirements:
     - colored-traceback
     - unix-ar
     - zstandard
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   # Can't use a regular imports test as due to the issue with the TERM variable
@@ -100,6 +100,7 @@ test:
     - asm --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pwntools.com
