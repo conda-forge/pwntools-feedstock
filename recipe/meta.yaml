@@ -1,5 +1,5 @@
 {% set name = "pwntools" %}
-{% set version = "4.13.1" %}
+{% set version = "4.14.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pwntools-{{ version }}.tar.gz
-  sha256: b3322725fb5031dc30965e3855073608d9abf74d2abf97a72c67d44aadfce37c
+  sha256: 83b3247de083dffafac3bf40f4d1455732f16e25ce3105fd09b55ac0f0d12e83
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - pwn=pwnlib.commandline.main:main
